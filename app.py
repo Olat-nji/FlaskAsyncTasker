@@ -23,7 +23,7 @@ def main_route():
 
     # Send email task if 'sendmail' parameter is present
     if email:
-        send_email.delay(email, 'A test email', 'Just some text')
+        send_email.delay(email, 'HNG 11 DEVOPS Submission', '@DavidOlayemi | https://github.com/Olat-nji/hng-11-task-3')
 
     # Log time task if 'talktome' parameter is present
     if talktome:
