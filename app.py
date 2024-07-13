@@ -26,7 +26,7 @@ def main_route():
         send_email.delay(email, 'HNG 11 DEVOPS Submission', '@DavidOlayemi | https://github.com/Olat-nji/hng-11-task-3')
 
     # Log time task if 'talktome' parameter is present
-    if talktome:
+    if talktome is not None:
         log_time()
 
     # Prepare response message
@@ -46,7 +46,7 @@ def get_logs():
         return Response(file_contents, mimetype='text/plain')
     except Exception as e:
         # Return error message and status code 500 if file access fails
-        return str(e), 500
+         return Response("", mimetype='text/plain')
 
 # Start the Flask application if this script is executed directly
 if __name__ == '__main__':

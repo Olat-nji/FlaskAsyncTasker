@@ -21,7 +21,7 @@ def log_time():
     now = datetime.now(pytz.utc).strftime('%Y-%m-%d %H:%M:%S %Z%z')
 
     # Write the formatted time to the log file
-    with open(LOG_FILE_PATH, 'w') as f:
+    with open(LOG_FILE_PATH, 'a') as f:
         f.write(f'{now}\n')
 
     # Return confirmation message
